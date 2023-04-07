@@ -23,7 +23,7 @@
 
 .cards-component {
   margin-top: 95px;
-  margin-left: 75px;
+  margin-left: 195px;
   display: grid;
   grid-template-columns: auto;
   gap: 0.1rem;
@@ -99,9 +99,10 @@ form label {
 
 form input {
   margin-top: 0.8rem;
-  border: 1px solid #ccc transparent;
+  border-color: rgb(203 213 225);
+  border-radius: 0.7rem;
   padding: 0.8rem;
-  opacity: 0.7;
+  opacity: 1;
   outline: none;
   width: 100%;
   font-size: 16px;
@@ -116,6 +117,12 @@ form input {
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0.025em;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: hsl(278, 73%, 26%);
+    font-size: 1.1rem;
+  }
 }
 
 .typing-form {
@@ -140,10 +147,16 @@ form input {
 
 @media (max-width: 1024px) {
   .front-card {
+    position: absolute;
     height: 200px;
     width: 340px;
     border-radius: 20px;
     margin-top: 120px;
+    z-index: 1;
+  }
+
+  form {
+    margin-top: 350px;
   }
 
   .back-card {
