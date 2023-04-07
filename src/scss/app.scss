@@ -1,0 +1,220 @@
+@import 'standard.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.backgr {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+}
+
+.backgr-img {
+  width: 33.333333%;
+}
+
+.cards-component {
+  margin-top: 95px;
+  margin-left: 75px;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 0.1rem;
+}
+
+.front-card {
+  background: url('../assets/bg-card-front.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 510px;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-text {
+  color: white;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.secondary-text {
+  color: white;
+  letter-spacing: 4px;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.card-logo {
+  width: 95px;
+}
+
+.card-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-card {
+  background: url('../assets/bg-card-back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 510px;
+  border-radius: 10px;
+  position: relative;
+  margin-left: 100px;
+}
+
+.cvv-text {
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  font-size: 24px;
+  right: 2.8rem;
+  top: 8.3rem;
+  letter-spacing: 4px;
+}
+
+form label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 18px;
+}
+
+form input {
+  margin-top: 0.8rem;
+  border: 1px solid #ccc transparent;
+  padding: 0.8rem;
+  opacity: 0.7;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.025em;
+}
+
+.typing-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  height: 100vh;
+  max-width: 32rem;
+}
+
+.small-form-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.expdate-block {
+  flex: 1 1 0%;
+}
+
+@media (max-width: 1024px) {
+  .front-card {
+    height: 200px;
+    width: 340px;
+    border-radius: 20px;
+    margin-top: 120px;
+  }
+
+  .back-card {
+    height: 200px;
+    width: 340px;
+    border-radius: 20px;
+  }
+
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .backgr-img {
+    height: auto;
+    width: 100%;
+  }
+
+  .cards-component {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0.1rem;
+  }
+
+  .card-logo {
+    width: 65px;
+  }
+
+  .main-text {
+    margin-top: 50px;
+    letter-spacing: 5px;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+
+  .secondary-text {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 6px;
+  }
+
+  .cvv-text {
+    position: absolute;
+    font-size: 20px;
+    right: 1.7rem;
+    top: 5.4rem;
+    letter-spacing: 2px;
+  }
+
+  .back-card {
+    margin-left: 0px;
+    position: absolute;
+    right: 15px;
+    z-index: -1;
+  }
+
+  .typing-form {
+    gap: 20px;
+    height: 100vh;
+    max-width: 20rem;
+    justify-content: flex-start;
+  }
+
+  .form-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+}
