@@ -48,61 +48,63 @@ export default function App() {
         </div>
         {/* Форма для заполнения */}
         <div className="form-block">
-          {/* <form className="typing-form">
-            <div>
-              <label htmlFor="cardholder_name">CARDHOLDER NAME</label>
-              <input
-                onChange={(event) => setName(event.target.value)}
-                type="text"
-                name="cardholder_name"
-                id="cardholder_name"
-                placeholder="e.g Jane Appleseed"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="card_number">CARD NUMBER</label>
-              <input
-                onChange={(event) => setCardData(event.target.value)}
-                type="number"
-                name="card_number"
-                id="card_number"
-                placeholder="e.g. 1234 5678 9123 0000"
-                maxLength={19}
-                required
-              />
-            </div>
-            <article className="small-form-data">
-              <div className="expdate-block">
-                <label htmlFor="exp_date">EXP. DATE (MM/YY)</label>
+          {!sent && (
+            <form className="typing-form">
+              <div>
+                <label htmlFor="cardholder_name">CARDHOLDER NAME</label>
                 <input
-                  value={date}
-                  onChange={(event) => setDate(event.target.value)}
-                  type="month"
-                  name="exp_date"
-                  id="exp_date"
-                  placeholder="MM"
+                  onChange={(event) => setName(event.target.value)}
+                  type="text"
+                  name="cardholder_name"
+                  id="cardholder_name"
+                  placeholder="e.g Jane Appleseed"
                   required
                 />
               </div>
-              <div className="expdate-block">
-                <label htmlFor="card_number">CVC</label>
+              <div>
+                <label htmlFor="card_number">CARD NUMBER</label>
                 <input
-                  onChange={(event) => setCvc(event.target.value)}
+                  onChange={(event) => setCardData(event.target.value)}
                   type="number"
                   name="card_number"
                   id="card_number"
                   placeholder="e.g. 1234 5678 9123 0000"
-                  maxLength={3}
+                  maxLength={19}
                   required
                 />
               </div>
-            </article>
-            <button type="submit" className="btn" onClick={() => setSent(true)}>
-              Confirm
-            </button>
-          </form> */}
-          <Sended />
+              <article className="small-form-data">
+                <div className="expdate-block">
+                  <label htmlFor="exp_date">EXP. DATE (MM/YY)</label>
+                  <input
+                    value={date}
+                    onChange={(event) => setDate(event.target.value)}
+                    type="month"
+                    name="exp_date"
+                    id="exp_date"
+                    placeholder="MM"
+                    required
+                  />
+                </div>
+                <div className="expdate-block">
+                  <label htmlFor="card_number">CVC</label>
+                  <input
+                    onChange={(event) => setCvc(event.target.value)}
+                    type="number"
+                    name="card_number"
+                    id="card_number"
+                    placeholder="e.g. 1234 5678 9123 0000"
+                    maxLength={3}
+                    required
+                  />
+                </div>
+              </article>
+              <button type="submit" className="btn" onClick={() => setSent(true)}>
+                Confirm
+              </button>
+            </form>
+          )}
+          {sent && <Sended setSent={setSent} />}
         </div>
       </div>
     </section>
