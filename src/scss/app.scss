@@ -1,6 +1,11 @@
 @import 'standard.scss';
+@import './components/sended.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+::-webkit-scrollbar {
+  width: 0;
+}
 
 * {
   font-family: 'Space Grotesk', sans-serif;

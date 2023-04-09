@@ -4,12 +4,16 @@ import './scss/app.scss';
 import bgMobile from './assets/bg-main-mobile.png';
 import bgDesktop from './assets/bg-main-desktop.png';
 import cardlogo from './assets/card-logo.svg';
+import Sended from './components/Sended';
 
 export default function App() {
+  // состояния для стилизации
   const [cardData, setCardData] = React.useState('0000 0000 0000 0000');
   const [name, setName] = React.useState('____ ___________');
   const [date, setDate] = React.useState('XX/XX');
   const [cvc, setCvc] = React.useState('000');
+  // состояние для смены правой части страницы при отправке формы
+  const [sent, setSent] = React.useState(false);
 
   return (
     <section>
@@ -44,7 +48,7 @@ export default function App() {
         </div>
         {/* Форма для заполнения */}
         <div className="form-block">
-          <form className="typing-form">
+          {/* <form className="typing-form">
             <div>
               <label htmlFor="cardholder_name">CARDHOLDER NAME</label>
               <input
@@ -94,10 +98,11 @@ export default function App() {
                 />
               </div>
             </article>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn" onClick={() => setSent(true)}>
               Confirm
             </button>
-          </form>
+          </form> */}
+          <Sended />
         </div>
       </div>
     </section>

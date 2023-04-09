@@ -1,0 +1,68 @@
+.sentblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // потом переделать на мобил
+  height: 100vh;
+  max-width: 32rem;
+
+  &-img {
+    display: block;
+  }
+
+  &-caption {
+    margin-top: 1rem;
+    color: rgb(30 41 59);
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  &-description {
+    margin-top: 1rem;
+    color: rgb(148 163 184);
+    text-align: center;
+    letter-spacing: 0.05rem;
+  }
+
+  &-btn {
+    margin-top: 1rem;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    padding: 0.75rem 6.5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.025em;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: hsl(278, 73%, 26%);
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sentblock {
+    margin-top: 4.5rem;
+
+    &-caption {
+      font-size: 2rem;
+      letter-spacing: 0.4rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+    }
+
+    &-btn {
+      padding: 0.75rem 7rem;
+    }
+  }
+}
