@@ -111,6 +111,10 @@ form input {
   outline: none;
   width: 100%;
   font-size: 16px;
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
 }
 
 .btn {
@@ -193,15 +197,15 @@ form input {
   }
 
   .main-text {
-    margin-top: 50px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
+    text-align: center;
     font-size: 17px;
     text-transform: uppercase;
   }
 
   .secondary-text {
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-size: 14px;
     text-transform: uppercase;
     margin-right: 6px;

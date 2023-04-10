@@ -45,7 +45,7 @@ const Form = ({ setName, setCardData, setDate, setCvc, setSent }) => {
             type="number"
             name="card_number"
             id="card_number"
-            placeholder="e.g. 1234 5678 9123 0000"
+            placeholder="e.g. 123"
             maxLength={3}
             required
           />
