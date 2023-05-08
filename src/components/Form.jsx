@@ -8,6 +8,7 @@ const Form = ({ setName, setCardData, setDate, setCvc, setSent }) => {
         <input
           onChange={(event) => setName(event.target.value)}
           type="text"
+          maxlength="16"
           name="cardholder_name"
           id="cardholder_name"
           placeholder="e.g Jane Appleseed"
@@ -19,10 +20,10 @@ const Form = ({ setName, setCardData, setDate, setCvc, setSent }) => {
         <input
           onChange={(event) => setCardData(event.target.value)}
           type="number"
+          onInput={(e) => (e.target.value = e.target.value.slice(0, 16))}
           name="card_number"
           id="card_number"
           placeholder="e.g. 1234 5678 9123 0000"
-          maxLength={19}
           required
         />
       </div>
@@ -43,10 +44,10 @@ const Form = ({ setName, setCardData, setDate, setCvc, setSent }) => {
           <input
             onChange={(event) => setCvc(event.target.value)}
             type="number"
+            onInput={(e) => (e.target.value = e.target.value.slice(0, 3))}
             name="card_number"
             id="card_number"
             placeholder="e.g. 123"
-            maxLength={3}
             required
           />
         </div>
